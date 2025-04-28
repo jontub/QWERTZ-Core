@@ -62,7 +62,9 @@ public class VanishCommands implements CommandExecutor {
             plugin.getMessageManager().sendMessage(sender, "vanish.you-got-vanished");
             plugin.getVanishManager().addVanishedPlayer((Player) sender);
             for (Player loop : Bukkit.getOnlinePlayers()) {
-                loop.hidePlayer((Player) sender);
+                if (!loop.hasPermission("qwertzcore.host.vanishbypass")) {
+                    loop.hidePlayer((Player) sender);
+                }
             }
         } else {
             plugin.getMessageManager().sendMessage(sender, "vanish.already-vanished");

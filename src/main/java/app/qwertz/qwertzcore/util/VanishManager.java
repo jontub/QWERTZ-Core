@@ -31,7 +31,9 @@ public class VanishManager {
     public void hideVanishedPlayers(Player player) {
         for (Player loop : Bukkit.getOnlinePlayers()) {
             if(vanishedPlayers.contains(loop.getUniqueId())) {
-                player.hidePlayer(loop);
+                if (!player.hasPermission("qwertzcore.host.vanishbypass")) {
+                    player.hidePlayer(loop);
+                }
             }
         }
     }
