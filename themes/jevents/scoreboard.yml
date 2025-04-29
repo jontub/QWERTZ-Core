@@ -15,9 +15,9 @@ lines:
   12: "&a"  # Strikethrough line
   11: "%colorPrimary%§l%event%"
   10: "§7├ §fᴘʟᴀʏᴇʀꜱ ᴀʟɪᴠᴇ: %colorPrimary%%alive%"
-  9:  "§7└ §fᴘʟᴀʏᴇʀꜱ ᴅᴇᴀᴅ: %colorPrimary%%dead%"
-  8:  ""
-  7:  "§7├ §fsᴛᴀʀᴛɪɴɢ ɪɴ %colorPrimary%%countdown%"
+  9:  "§7├ §fᴘʟᴀʏᴇʀꜱ ᴅᴇᴀᴅ: %colorPrimary%%dead%"
+  8:  "§7└ §fsᴛᴀʀᴛɪɴɢ ɪɴ %colorPrimary%%countdown%"
+  7:  ""
   6:  " "# Empty line
   5:  " "
   4:  "&6%player%"
