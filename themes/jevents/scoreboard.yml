@@ -9,7 +9,7 @@
 
 # TO MAKE USE OF THIS FILE YOU MUST SET active-theme: "file" IN messages.yml!
 
-title: "§d§l%server%" # Scoreboard Title
+title: "§b§l%server%" # Scoreboard Title
 
 lines:
   12: "&a"  # Strikethrough line
