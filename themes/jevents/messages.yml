@@ -33,9 +33,9 @@ chatting:
   chat: "%prefix%%name%%suffix%:\u00a7r %message%"
   death: "%colorDead%%name% died!"
   # Valid placeholders: %name%, %count%, %newCount%
-  leave-msg: "%colorSecondary%%%prefix%%name%%suffix%% %colorSecondary%left!"
+  leave-msg: "%colorSecondary%%name% %colorSecondary%left!"
   # Valid placeholders: %name%, %count%, %newCount%
-  join-msg: "%colorSecondary%%%prefix%%name%%suffix%% %colorSecondary%joined!"
+  join-msg: "%colorSecondary%%name% %colorSecondary%joined!"
 
 config:
   # Valid placeholders: %key%

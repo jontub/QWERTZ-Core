@@ -9,7 +9,7 @@
 
 # TO MAKE USE OF THIS FILE YOU MUST SET active-theme: "file" IN messages.yml!
 
-title: "%colorPrimary%§l%server%" # Scoreboard Title
+title: "%colorPrimary%\u00A7l%server%" # Scoreboard Title
 
 lines:
   12: "&a"  # Strikethrough line
@@ -18,10 +18,10 @@ lines:
   9:  "§7└ §fᴘʟᴀʏᴇʀꜱ ᴅᴇᴀᴅ: %colorPrimary%%dead%"
   8:  ""
   7:  "§7├ §fsᴛᴀʀᴛɪɴɢ ɪɴ %colorPrimary%%countdown%"
-  6:  " " # Empty line
-  5:  "&6%player%"
-  4:  "§7└ §fʀᴇᴠɪᴠᴇꜱ: %colorPrimary% &6%tokens%"
-  3:  " "
+  6:  " "# Empty line
+  5:  ""
+  4:  "&6%player%"
+  3:  "§7└ §fʀᴇᴠɪᴠᴇꜱ: %colorPrimary% &6%tokens%"
   2:  " "
   1:  "&6" # Strikethrough line
   0:   "" # Bottom line
