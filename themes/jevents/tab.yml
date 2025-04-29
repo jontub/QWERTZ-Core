@@ -8,7 +8,7 @@
 
 header:
   - " "
-  - "%colorSecondary%Welcome to %colorPrimary%§l%server%%colorSecondary%, %colorSecondary%%player%"
+  - "%colorSecondary%Welcome to %colorPrimary%§l%server%%colorSecondary%"
   - " "
 
 footer:
