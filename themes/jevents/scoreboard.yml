@@ -19,7 +19,7 @@ lines:
   8:  ""
   7:  "§7├ §fsᴛᴀʀᴛɪɴɢ ɪɴ %colorPrimary%%countdown%"
   6:  " "# Empty line
-  5:  ""
+  5:  " "
   4:  "&6%player%"
   3:  "§7└ §fʀᴇᴠɪᴠᴇꜱ: %colorPrimary% &6%tokens%"
   2:  " "
