@@ -23,6 +23,6 @@ lines:
   4:  "%colorPrimary%&l%player%"
   3:  "§7└ §fʀᴇᴠɪᴠᴇꜱ: %colorPrimary%%tokens%"
   2:  " "
-  1:  "&6" # Strikethrough line
+  1:  " " # Strikethrough line
   0:   "" # Bottom line
 
