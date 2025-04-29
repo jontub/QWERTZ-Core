@@ -85,7 +85,7 @@ event:
   # Valid placeholders: %player% (Executor), %name% (Target)
   revive: "%colorPrimary%%CORE_ICON% %colorPrimary%%name% %colorSecondary%was revived by %colorPrimary%%player%!"
   # Valid placeholders: %player% (Executor), %name% (Target)
-  unrevive: "%colorPrimary%%CORE_ICON% %colorPrimary%%name% %colorSecondary%has been %colorPrimary%unrevived by %player"
+  unrevive: "%colorPrimary%%CORE_ICON% %colorPrimary%%name% %colorSecondary%has been %colorPrimary%%player%"
   noalive: "%colorPrimary%%CORE_ICON% %colorPrimary%Nobody %colorSecondary%is %colorPrimary%Alive!"
   nodead: "%colorPrimary%%CORE_ICON% %colorPrimary%Nobdy %colorSecondary%is %colorPrimary%Dead!"
   # Valid placeholders: %list%
