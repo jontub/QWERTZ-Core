@@ -19,8 +19,8 @@ lines:
   8:  "§7└ §fsᴛᴀʀᴛɪɴɢ ɪɴ %colorPrimary%%countdown%"
   7:  "§6"
   6:  " "# Empty line
-  5:  " "
-  4:  "%colorPrimary%&l%player%"
+  5:  "§d"
+  4:  "colorPrimary%&l%player%"
   3:  "§7└ §fʀᴇᴠɪᴠᴇꜱ: %colorPrimary%%tokens%"
   2:  " "
   1:  "&6" # Strikethrough line
