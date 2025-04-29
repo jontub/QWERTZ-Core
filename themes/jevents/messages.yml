@@ -8,8 +8,8 @@ placeholders:
   colorSecondary: "\u00a77"
   colorTertiary: "\u00a7b"
   colorError: "\u00a7c"
-  colorSuccess: "\u00a7a"
-  colorAlive: "\u00a7b"
+  colorSuccess: "\u00A7b"
+  colorAlive: "\u00A7b"
   colorDead: "\u00a7c"
   CORE_ICON_RAW: "\uD83D\uDDE1"
   CORE_ICON: "\u00A7b\uD83D\uDDE1"
@@ -83,7 +83,7 @@ event:
   # Valid placeholders: %player%
   unrevivedall: "%colorPrimary%%CORE_ICON% %colorPrimary%All players %colorSecondary%have been %colorPrimary%Unrevived %colorSecondary%by %colorPrimary%%player%"
   # Valid placeholders: %player% (Executor), %name% (Target)
-  revive: "%colorPrimary%%CORE_ICON% %colorPrimary%%name% %colorSecondary%was revived randomly by %colorPrimary%%player%!"
+  revive: "%colorPrimary%%CORE_ICON% %colorPrimary%%arg-1 parsed as player% %colorSecondary%was revived by %colorPrimary%%player%!"
   # Valid placeholders: %player% (Executor), %name% (Target)
   unrevive: "%colorPrimary%%CORE_ICON% %colorPrimary%%name% %colorSecondary%has been %colorPrimary%unrevived by %player"
   noalive: "%colorPrimary%%CORE_ICON% %colorPrimary%Nobody %colorSecondary%is %colorPrimary%Alive!"
@@ -281,11 +281,9 @@ timer:
 
 vanish:
   # Valid placeholders: %name%, %fakeCount%, %newCount%
-  leave-msg: "%CORE_ICON% %colorPrimary%%name%%colorDead% just left us! \u00a77[%colorTertiary%%fakeCount%\u00a77
-    -> %colorTertiary%%newCount%\u00a77]"
+  leave-msg: "%colorSecondary%%name%% %colorSecondary%left!"
   # Valid placeholders: %name%, %fakeCount%, %newCount%
-  join-msg: "%CORE_ICON% %colorPrimary%%name%%colorAlive% just joined! \u00a77[%colorTertiary%%fakeCount%\u00a77
-    -> %colorTertiary%%newCount%\u00a77]"
+  join-msg: "%colorSecondary%%name%% %colorSecondary%joined!"
   you-got-vanished: "%CORE_ICON% %colorPrimary%You have been vanished!"
   you-got-unvanished: "%CORE_ICON% %colorPrimary%You have been unvanished!"
   already-vanished: "%colorError%You are already vanished!"
@@ -365,14 +363,18 @@ emojis:
   # Format: ":laugh:|:D"
   emojis:
     - ":core:|\u00a7e\ud83d\udde1\u00a7r"
-    - ":fire:|\u00a76\ud83d\udd25\u00a7r"
-    - ":skull:|\u00a77\ud83d\udc80\u00a7r"
-    - ":cry:|\u00a7c\ud83d\ude22\u00a7r"
-    - ":D|\u00a7e\ud83d\ude04\u00a7r"
-    - "D:|\u00a7c\ud83d\ude26\u00a7r"
-    - ":)|\u00a7e\ud83d\ude42\u00a7r"
-    - "<3|\u00a7c\u2764\u00a7r"
-
+    - ":fire:|\u00A76\uD83D\uDD25\u00A7f"
+    - ":skull:|\u2620"
+    - ":D|\u263A"
+    - "D:|\u2639"
+    - ":(|\u2639"
+    - ":)|\u263A"
+    - "<3|\u00A7c\u2764\u00A7f"
+    - "o/|§d( ˙ᵕ˙)/§f"
+    - ":star:|§6⭐§f"
+    - ":no:|§C§l✗§f"
+    - ":x:|§C§l✗§f"
+    - ":yes:|§a✔§f"
 configgui:
   # Valid placeholders: %key%
   enter-new-value: "%colorPrimary%Enter new value for %colorTertiary%%key%%colorPrimary% in chat:"

@@ -7,14 +7,15 @@
 # TO MAKE USE OF THIS FILE YOU MUST SET active-theme: "file" IN messages.yml!
 
 header:
-  - "&e&l%server%"
   - " "
-  - "&6Event: &e%event%"
-  - "&bPlayers: &3%player%"
+  - "%colorSecondary%Welcome to %colorPrimary%§l%server%%colorSecondary%, %colorSecondary%%player%"
+  - " "
 
 footer:
   - " "
-  - "&6%discord%"
+  - "%colorSecondary%There are %colorPrimary%%player% %colorSecondary%players online!"
+  - " "
+  - "%colorSecondary%%discord%"
 
 # Valid placeholders: %prefix%, %player%, %suffix%, %ping_color%, %ping%
 player-list-name: "%prefix%%player%%suffix%"

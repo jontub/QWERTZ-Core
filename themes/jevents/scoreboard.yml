@@ -9,20 +9,20 @@
 
 # TO MAKE USE OF THIS FILE YOU MUST SET active-theme: "file" IN messages.yml!
 
-title: "&e\ud83d\udde1&e&l %server% &e\ud83d\udde1" # Scoreboard Title
+title: "%colorPrimary%§l%server%" # Scoreboard Title
 
 lines:
   12: "&a"  # Strikethrough line
-  11: "&6Event info:"
-  10: "&7| &eName: &6%event%"
-  9:  "&7| &eAlive: &6%alive%"
+  11: "%colorPrimary%§l%event%"
+  10: "§7├ §fᴘʟᴀʏᴇʀꜱ ᴀʟɪᴠᴇ: %colorPrimary%%alive%"
+  9:  "§7└ §fᴘʟᴀʏᴇʀꜱ ᴅᴇᴀᴅ: %colorPrimary%%dead%"
   8:  ""
-  7:  "&7| &eStarting in: &6%countdown%"
+  7:  "§7├ §fsᴛᴀʀᴛɪɴɢ ɪɴ %colorPrimary%%countdown%"
   6:  " " # Empty line
   5:  "&6%player%"
-  4:  "&7| &eRank: &6%rank%"
-  3:  "&7| &eWins: &6%wins%"
-  2:  "&7| &eRevive Tokens: &6%tokens%"
+  4:  "§7└ §fʀᴇᴠɪᴠᴇꜱ: %colorPrimary% &6%tokens%"
+  3:  " "
+  2:  " "
   1:  "&6" # Strikethrough line
   0:   "" # Bottom line
 
