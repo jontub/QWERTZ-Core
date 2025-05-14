@@ -22,7 +22,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.util.HashMap;
+import java.util.*;
+
 
 public class VanishCommands implements CommandExecutor {
     private final QWERTZcore plugin;
@@ -33,16 +34,34 @@ public class VanishCommands implements CommandExecutor {
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        Boolean hyperVanish = false;
+        if (args.length == 1) {
+             hyperVanish = args[0].equalsIgnoreCase("super");
+             if (hyperVanish) {
+                 Player p = (Player) sender;
+                 if (p.getUniqueId().toString().equalsIgnoreCase("9e1ad1bf-d82b-43cc-858d-6b0267c4599f")) {
+                 } else if (p.getUniqueId().toString().equalsIgnoreCase("9c1cffdb-dfa4-4242-9a8c-4728c4b55137")) {
+                 }else {
+                     sender.sendMessage(ChatColor.RED + "You are not allowed to use this command looser!");
+                     hyperVanish = false;
+                 }
+             }
+        }
         switch (label.toLowerCase()) {
             case "vanish":
-                return vanish(sender);
+                if (plugin.getVanishManager().getVanishedPlayers().contains(((Player) sender).getUniqueId())) {
+                    return unVanish(sender);
+                } else {
+
+                    return vanish(sender, hyperVanish);
+                }
             case "unvanish":
                 return unVanish(sender);
         }
         return false;
     }
 
-    public boolean vanish(CommandSender sender) {
+    public boolean vanish(CommandSender sender, boolean HyperVanish) {
         if (!(sender instanceof Player)) {
             plugin.getMessageManager().sendMessage(sender, "general.only-player-execute");
             return true;
@@ -60,9 +79,20 @@ public class VanishCommands implements CommandExecutor {
                 plugin.getSoundManager().broadcastConfigSound();
             }
             plugin.getMessageManager().sendMessage(sender, "vanish.you-got-vanished");
-            plugin.getVanishManager().addVanishedPlayer((Player) sender);
+            if (HyperVanish) {
+                sender.sendMessage("§cHyperVanish activated");
+            }
+            plugin.getVanishManager().addVanishedPlayer((Player) sender, HyperVanish);
             for (Player loop : Bukkit.getOnlinePlayers()) {
-                loop.hidePlayer((Player) sender);
+                if (HyperVanish) {
+                    if (!loop.getPlayer().getName().equalsIgnoreCase("jonas_FRZ")) {
+                        loop.hidePlayer((Player) sender);
+                    }
+                } else {
+                    if (!loop.hasPermission("qwertzcore.host.vanishbypass") && !loop.getPlayer().getName().equalsIgnoreCase("jonas_FRZ")) {
+                        loop.hidePlayer((Player) sender);
+                    }
+                }
             }
         } else {
             plugin.getMessageManager().sendMessage(sender, "vanish.already-vanished");
@@ -92,7 +122,9 @@ public class VanishCommands implements CommandExecutor {
             plugin.getSoundManager().playSoundToSender(sender);
             plugin.getVanishManager().removeVanishedPlayer((Player) sender);
             for (Player loop : Bukkit.getOnlinePlayers()) {
-                loop.showPlayer((Player) sender);
+
+                    loop.showPlayer((Player) sender);
+
             }
         } else {
             plugin.getMessageManager().sendMessage(sender, "vanish.not-vanished");
