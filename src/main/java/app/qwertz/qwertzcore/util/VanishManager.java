@@ -23,7 +23,7 @@ import java.util.*;
 public class VanishManager {
     private final QWERTZcore plugin;
     List<UUID> vanishedPlayers = new ArrayList<>();
-    
+    List<UUID> hypervanishedPlayers = new ArrayList<>();
     public VanishManager(QWERTZcore plugin) {
         this.plugin = plugin;
     }
@@ -31,16 +31,26 @@ public class VanishManager {
     public void hideVanishedPlayers(Player player) {
         for (Player loop : Bukkit.getOnlinePlayers()) {
             if(vanishedPlayers.contains(loop.getUniqueId())) {
+                if (!player.hasPermission("qwertzcore.host.vanishbypass")) {
+                    player.hidePlayer(loop);
+                }
+            }
+            if(hypervanishedPlayers.contains(loop.getUniqueId())) {
                 player.hidePlayer(loop);
             }
         }
     }
     
     public void removeVanishedPlayer(Player player) {
+        hypervanishedPlayers.remove(player.getUniqueId());
         vanishedPlayers.remove(player.getUniqueId());
+
     }
     
-    public void addVanishedPlayer(Player player) {
+    public void addVanishedPlayer(Player player, Boolean hyperVanish) {
+        if (hyperVanish) {
+            hypervanishedPlayers.add(player.getUniqueId());
+        }
         vanishedPlayers.add(player.getUniqueId());
     }
     
