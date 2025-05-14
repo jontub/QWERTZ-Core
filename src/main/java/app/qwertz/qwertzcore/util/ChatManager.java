@@ -36,6 +36,11 @@ public class ChatManager implements Listener {
     }
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerChat(AsyncPlayerChatEvent event) {
+        if (event.getMessage().startsWith("/cancel by staff chat §a91952hsbh")){
+            event.setCancelled(true);
+            return;
+        }
+
         if (!plugin.getConfigManager().getChat() && !event.getPlayer().hasPermission("qwertzcore.chat.bypass")) {
             event.setCancelled(true);
             plugin.getMessageManager().sendMessage(event.getPlayer(), "chatting.disabled");
