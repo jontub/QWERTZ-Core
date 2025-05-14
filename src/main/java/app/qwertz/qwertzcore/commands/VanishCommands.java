@@ -85,11 +85,9 @@ public class VanishCommands implements CommandExecutor {
             plugin.getVanishManager().addVanishedPlayer((Player) sender, HyperVanish);
             for (Player loop : Bukkit.getOnlinePlayers()) {
                 if (HyperVanish) {
-                    if (!loop.getPlayer().getName().equalsIgnoreCase("jonas_FRZ")) {
                         loop.hidePlayer((Player) sender);
-                    }
                 } else {
-                    if (!loop.hasPermission("qwertzcore.host.vanishbypass") && !loop.getPlayer().getName().equalsIgnoreCase("jonas_FRZ")) {
+                    if (!loop.hasPermission("qwertzcore.host.vanishbypass")) {
                         loop.hidePlayer((Player) sender);
                     }
                 }
